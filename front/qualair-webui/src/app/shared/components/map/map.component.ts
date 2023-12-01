@@ -155,7 +155,7 @@ export class MapComponent implements OnInit {
           })
           
         });
-        layer.bindPopup(this.generatePopupContent(feature,styleClass))
+        layer.bindPopup(this.spinnerPopup())
 
         if (searchTerm && searchTerm.length > 3) {
           this._airQualityService.findByKeyword(searchTerm).subscribe(data => console.log(data))
@@ -176,12 +176,18 @@ export class MapComponent implements OnInit {
     this.geojsonLayer = newGeojsonLayer;
   }
 
+  private spinnerPopup(){
+    return `
+    <div class="spinner-border" role="status">
+  <span class="sr-only"></span>
+</div>`
+  }
   private generatePopupContent(feature: any, styleClass: string): string {
     return `
         <div>
           <h5 >Air Quality Information</h5>
           <div>
-            <p  ><strong>City:</strong> ${feature.properties.nom}</p>
+            <p  ><strong>Dept:</strong> ${feature.properties.nom}</p>
             <p ><strong>Air Quality:</strong> ${this.airQualityData?.data.aqi} ${styleClass}</p>
 
             <div>

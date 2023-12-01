@@ -1,6 +1,17 @@
 form{
     z-index: 999;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 40px;
+
+    animation: fadeIn 0.5s ease-in-out; 
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
