@@ -1,0 +1,29 @@
+<ng-container *ngIf="userDetails|async as userDetails; else unLoggedIn">
+  <div ngbDropdown>
+    <button type="button" ngbDropdownToggle class="btn btn-tertiary" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-person-fill"></i>
+      Bonjour, {{ userDetails.firstName }}
+
+    </button>
+    <ul ngbDropdownMenu>
+      <li><a ngbDropdownItem [routerLink]="['/profil']">Profile</a></li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li><a ngbDropdownItem class="dropdown-item disabled">Alerte</a></li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li>
+        <a ngbDropdownItem class="dropdown-item"
+        (click)="logout()">Se déconnecter</a></li>
+    </ul>
+  </div>
+</ng-container>
+
+<ng-template #unLoggedIn>
+  <a routerLink="/login" class="btn btn-tertiary">
+    <i class="bi bi-person-fill"></i>
+    Se connecter
+  </a>
+</ng-template>

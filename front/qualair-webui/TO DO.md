@@ -1,0 +1,29 @@
+- [x] Préparation des éléments Angular
+- [ ] Module Admin
+    - [ ] Services et models associés dans le module Shared
+    - [ ] Sous-Menus Administration
+    - [ ] Gestion des utilisateurs
+    - [ ] Centre de notifications
+    - [ ] Gestion des forums
+- [ ] Module Forum
+    - [ ] Services et models associés dans le module Shared
+    - [ ] Espace forum
+    - [ ] Page Forum
+- [ ] AirWeather Module
+    - [ ] Services et models associés dans le module Shared
+    - [ ] Carte de France dans le Shared Module
+    - [ ] Page de recherche
+    - [ ] Résultat de recherche
+    - [ ] Résultat de recherche - Détails Météo
+    - [ ] Résultat de recherche - Détails Qualité d'air
+    - [ ] Recherche historique
+    - [ ] Résultat de recherche d'historique
+- [x] User Module
+    - [x] Services et models associés dans le module Shared
+    - [x] Page de connexion
+    - [x] Page d'inscription
+    - [x] Page de profil
+    - [x] Guard d'authentification
+
+- [ ] Shared Module
+  - [ ] Header + User-center

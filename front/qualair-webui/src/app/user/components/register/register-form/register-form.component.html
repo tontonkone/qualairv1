@@ -1,0 +1,56 @@
+<form [formGroup]="signupForm" (ngSubmit)="signup()">
+    <div class="form-group row mb-3">
+        <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail</label>
+        <div class="col-md-6">
+            <input type="text" [formControlName]="'email'" id="email_address" class="form-control" name="email-address"
+                required [class.is-invalid]="!signupForm.get('email')?.valid && signupForm.get('email')?.touched">
+            <div class="invalid-feedback">
+                Please provide a valid email.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row mb-3">
+        <label class="col-md-4 col-form-label text-md-right" for="">Prénom</label>
+        <div class="col-md-6">
+            <input type="text" [formControlName]="'firstName'" class="form-control" required
+                [class.is-invalid]="!signupForm.get('firstName')?.valid && signupForm.get('firstName')?.touched">
+            <div class="invalid-feedback">
+                Please provide a valid first name.
+            </div>
+        </div>
+    </div>
+    <div class="form-group row mb-3">
+        <label class="col-md-4 col-form-label text-md-right" for="">Nom</label>
+        <div class="col-md-6">
+            <input type="text" [formControlName]="'lastName'" class="form-control" required
+                [class.is-invalid]="!signupForm.get('lastName')?.valid && signupForm.get('lastName')?.touched">
+            <div class="invalid-feedback">
+                Please provide a valid last name.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row mb-3">
+        <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+        <div class="col-md-6">
+            <input type="password" [formControlName]="'password'" id="password" class="form-control" name="password"
+                required [class.is-invalid]="!signupForm.get('password')?.valid && signupForm.get('password')?.touched">
+            <div class="invalid-feedback">
+                Please provide a valid password.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row mb-3">
+        <div class="col-md-6 offset-md-4">
+            <button type="submit" class="sign-up btn btn-secondary" [disabled]="!signupForm.valid">
+                Sign Up
+            </button>
+            <span style="padding-left: 15px">Vous avez un compte ? <a routerLink="../login">Log In</a></span>
+        </div>
+    </div>
+    <div class="alert alert-danger mt-3 " *ngIf='this.isError'>
+        <p class="login-failed-text">{{isError}}</p>
+    </div>
+</form>

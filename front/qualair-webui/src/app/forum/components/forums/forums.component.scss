@@ -1,0 +1,107 @@
+/* Style pour la section "Ajouter un message" */
+.messages-section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #b9bbd8;
+    background-color: #626adf;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      margin-block: 10px;
+    }
+  
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+  
+    button {
+      padding: 10px 20px;
+      background-color: #007bff; /* Bleu */
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #0056b3; /* Légèrement plus foncé au survol */
+      }
+    }
+  }
+  
+  /* Style pour la section "Forum" */
+  .forum-section {
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      margin-block: 10px;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    li {
+      font-size: 16px;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  /* Style pour la section "Créer un forum" */
+  .create-forum-section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #b9bbd8;
+    background-color: #626adf;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      margin-block: 10px;
+    }
+  
+    form {
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+  
+      button {
+        padding: 10px 20px;
+        background-color: #007bff; /* Bleu */
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #0056b3; /* Légèrement plus foncé au survol */
+        }
+      }
+    }
+  }
+  

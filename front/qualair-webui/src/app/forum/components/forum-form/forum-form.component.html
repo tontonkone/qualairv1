@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Ajouter un forum</h1>
+  <div class="container-fluid bg-primary-subtle p-3">
+    <form (submit)="createForum()" class="form">
+      <div class="mb-3">
+        <label class="form-label" for="title">Titre du forum</label>
+        <input class="form-control" type="text" id="title" [(ngModel)]="newForum.title" name="title" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Créer</button>
+    </form>
+  </div>
+</div>

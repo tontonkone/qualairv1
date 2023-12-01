@@ -1,0 +1,9 @@
+<div class="container">
+  <ng-container *ngIf="forum$|async as forum">
+    <h1>{{ forum.title }}</h1>
+    <ng-container *ngIf="messages$|async as messages">
+      <app-message-list [messages]="messages"></app-message-list>
+    </ng-container>
+    <app-message-form [forumId]="forum.id" (messageAdded)="onMessageAdded()"></app-message-form>
+  </ng-container>
+</div>

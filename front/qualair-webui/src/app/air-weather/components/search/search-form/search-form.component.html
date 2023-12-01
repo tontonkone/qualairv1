@@ -1,0 +1,16 @@
+<section class="container-fluid text-bg-primary py-3">
+  <h2>Recherche</h2>
+  <form [formGroup]="searchForm"
+        (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="city"
+             class="form-label">Commune</label>
+      <input type="text"
+             name="city"
+             id="city"
+             formControlName="city"
+             class="form-control text-bg-light">
+    </div>
+    <button type="submit" class="btn btn-outline-light end">Valider</button>
+  </form>
+</section>

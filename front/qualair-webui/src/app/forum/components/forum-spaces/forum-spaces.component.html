@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Espace Forum</h1>
+
+  <div class="bg-primary-subtle p-3">
+    <ng-container *ngIf="forums|async as forums">
+      <app-forum-list [forums]="forums"></app-forum-list>
+    </ng-container>
+
+    <a [routerLink]="['/forums', 'form']" class="btn btn-link">Créer un nouveau formulaire</a>
+  </div>
+</div>

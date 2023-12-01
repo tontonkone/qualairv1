@@ -1,0 +1,15 @@
+<div class="card mb-3 h-100 coming-soon">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <svg></svg>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Qualité de l'air</h5>
+        <p class="card-text">{{ (airQuality|async)?.index }}</p>
+
+        <p><small class="text-body-secondary">{{ airQuality|async|json }}</small></p>
+      </div>
+    </div>
+  </div>
+</div>

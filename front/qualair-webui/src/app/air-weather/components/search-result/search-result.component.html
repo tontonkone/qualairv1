@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Informations</h1>
+
+  <p>Commune : {{ city }}</p>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <app-weather-result [city]="city"></app-weather-result>
+      </div>
+      <div class="col-md-6">
+        <app-air-result [city]="city"></app-air-result>
+      </div>
+    </div>
+  </div>
+</div>
